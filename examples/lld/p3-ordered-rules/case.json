@@ -1,0 +1,10 @@
+{
+  "kind": "positive",
+  "task": "In pricing.py, add a VIP rule: carts with cart['vip'] true get 500 cents off, applied after the member discount and before the coupon. The final price is never below zero.",
+  "assertions": [
+    "Rule order is explicit and deterministic: member discount, VIP, coupon, floor at zero. RULES is not a set",
+    "final_price is right for a member VIP cart with a coupon, and 0 when discounts exceed the subtotal (run code with several PYTHONHASHSEED values)",
+    "A runnable check covers the order",
+    "No rule-engine classes were added: plain functions in a sequence or plain sequential code"
+  ]
+}

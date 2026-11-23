@@ -1,0 +1,9 @@
+{
+  "kind": "negative",
+  "task": "geocode_cli.py is slow because many cities repeat in the input file. Make it faster.",
+  "assertions": [
+    "Repeated cities no longer recompute (functools cache/lru_cache or a plain dict)",
+    "No threads, executors, asyncio, futures, locks or cache class were added",
+    "At most about 5 changed lines"
+  ]
+}

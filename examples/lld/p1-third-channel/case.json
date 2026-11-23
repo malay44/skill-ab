@@ -1,0 +1,9 @@
+{
+  "kind": "positive",
+  "task": "In shop.py, also send a push notification for every order event: push_service.send(user.device_token, text). push_service is already in services.py.",
+  "assertions": [
+    "All four order events (place, ship, cancel, refund) send email, sms and push with the right text (run code)",
+    "The fan-out to channels lives in ONE place; the four event methods do not each repeat three send calls",
+    "No class hierarchy for channels and no event-bus framework: the fan-out is a function or a short list"
+  ]
+}

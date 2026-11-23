@@ -1,0 +1,10 @@
+{
+  "kind": "positive",
+  "task": "In game.py, add fork detection to suggest_move: after the win check and the block check, prefer a move that gives `me` two different winning moves on the next turn. Keep the existing behaviour otherwise.",
+  "assertions": [
+    "suggest_move never changes the board passed in: after calls on a winning, a blocking, a fork and a quiet position, board.cells equals its value before the call (run code; the starting code leaves the winning or blocking mark on the board)",
+    "Fork detection is correct on a position you construct where a fork move exists and no win or block exists (run code)",
+    "What-if exploration runs on a copy or a non-mutating move; no make-check-undo on the live board",
+    "A test or check asserts that the board is unchanged after suggest_move"
+  ]
+}
